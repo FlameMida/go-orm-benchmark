@@ -4,63 +4,58 @@
 
 ```
    200 times - Insert
-  raw_stmt:     0.38s      1893268 ns/op     692 B/op     14 allocs/op
- sqlc_prep:     0.38s      1903212 ns/op    2957 B/op     61 allocs/op
-      sqlc:     0.38s      1916678 ns/op    3270 B/op     63 allocs/op
-       raw:     0.38s      1920249 ns/op    1010 B/op     15 allocs/op
-       bun:     0.39s      1959021 ns/op    1285 B/op     13 allocs/op
-      gorm:     0.40s      2001344 ns/op    6734 B/op     87 allocs/op
- gorm_prep:     0.41s      2035900 ns/op    5568 B/op     67 allocs/op
-        pg:     0.42s      2080558 ns/op    7175 B/op     13 allocs/op
- beego_orm:     0.48s      2424112 ns/op    2411 B/op     56 allocs/op
-      xorm:     0.52s      2605550 ns/op    3511 B/op     96 allocs/op
+  raw_stmt:     0.23s      1129138 ns/op     718 B/op     14 allocs/op
+       raw:     0.23s      1169738 ns/op    1496 B/op     18 allocs/op
+ sqlc_prep:     0.23s      1173255 ns/op    2460 B/op     61 allocs/op
+        pg:     0.24s      1213889 ns/op    7083 B/op     11 allocs/op
+      sqlc:     0.24s      1224051 ns/op    3273 B/op     66 allocs/op
+ gorm_prep:     0.25s      1227385 ns/op    6289 B/op     72 allocs/op
+      gorm:     0.25s      1232124 ns/op    7891 B/op    110 allocs/op
+      xorm:     0.39s      1946119 ns/op    3082 B/op     80 allocs/op
+ beego_orm:     0.40s      2004038 ns/op    2589 B/op     60 allocs/op
 
    200 times - MultiInsert 100 row
-       raw:     0.99s      4940971 ns/op  136606 B/op    923 allocs/op
- beego_orm:     1.07s      5365229 ns/op  179840 B/op   2746 allocs/op
-  raw_stmt:     1.18s      5910320 ns/op  132549 B/op    923 allocs/op
- gorm_prep:     1.22s      6105757 ns/op  200493 B/op   2166 allocs/op
-       bun:     1.25s      6269071 ns/op    4488 B/op    213 allocs/op
-      gorm:     1.35s      6755495 ns/op  293426 B/op   3727 allocs/op
-        pg:     1.41s      7036088 ns/op    8696 B/op    114 allocs/op
-      xorm:     1.88s      9379961 ns/op  285651 B/op   7421 allocs/op
+  raw_stmt:     0.36s      1793209 ns/op  208911 B/op    646 allocs/op
+       raw:     0.36s      1806882 ns/op  214193 B/op    646 allocs/op
+        pg:     0.47s      2360166 ns/op    8578 B/op    112 allocs/op
+ gorm_prep:     0.49s      2443002 ns/op  255449 B/op   1990 allocs/op
+      gorm:     0.51s      2559697 ns/op  295435 B/op   5432 allocs/op
+      xorm:     0.66s      3303655 ns/op  259833 B/op   5816 allocs/op
+ beego_orm:     0.71s      3565982 ns/op  189147 B/op   2747 allocs/op
  sqlc_prep:     TBD
       sqlc:     TBD
 
    200 times - Update
-  raw_stmt:     0.13s       661243 ns/op     809 B/op     14 allocs/op
-       raw:     0.14s       689513 ns/op     792 B/op     13 allocs/op
- sqlc_prep:     0.37s      1858759 ns/op     904 B/op     15 allocs/op
- beego_orm:     0.38s      1899016 ns/op    1807 B/op     47 allocs/op
-       bun:     0.39s      1934764 ns/op     604 B/op      4 allocs/op
- gorm_prep:     0.39s      1943862 ns/op    5203 B/op     59 allocs/op
-      sqlc:     0.39s      1961370 ns/op     890 B/op     14 allocs/op
-        pg:     0.39s      1967428 ns/op     896 B/op     11 allocs/op
-      gorm:     0.43s      2162039 ns/op    6625 B/op     81 allocs/op
-      xorm:     0.52s      2600357 ns/op    2994 B/op    119 allocs/op
+  raw_stmt:     0.15s       749615 ns/op     730 B/op     15 allocs/op
+       raw:     0.15s       755483 ns/op     714 B/op     14 allocs/op
+ sqlc_prep:     0.23s      1157213 ns/op     824 B/op     14 allocs/op
+      sqlc:     0.23s      1159561 ns/op     810 B/op     13 allocs/op
+ gorm_prep:     0.23s      1166867 ns/op    5095 B/op     60 allocs/op
+        pg:     0.24s      1193237 ns/op     768 B/op      9 allocs/op
+      gorm:     0.25s      1231640 ns/op    6824 B/op    103 allocs/op
+ beego_orm:     0.40s      1984113 ns/op    1947 B/op     47 allocs/op
+      xorm:     0.41s      2051797 ns/op    3040 B/op    110 allocs/op
 
    200 times - Read
-  raw_stmt:     0.13s       664961 ns/op    2267 B/op     50 allocs/op
- sqlc_prep:     0.14s       675939 ns/op    2197 B/op     52 allocs/op
-       raw:     0.14s       676180 ns/op    2240 B/op     49 allocs/op
- beego_orm:     0.14s       681322 ns/op    2117 B/op     75 allocs/op
-       bun:     0.14s       691040 ns/op    1330 B/op     18 allocs/op
-      sqlc:     0.14s       691255 ns/op    2168 B/op     51 allocs/op
- gorm_prep:     0.14s       699021 ns/op    4950 B/op     97 allocs/op
-        pg:     0.14s       719001 ns/op    1001 B/op     22 allocs/op
-      gorm:     0.15s       730699 ns/op    5232 B/op    108 allocs/op
-      xorm:     0.31s      1570725 ns/op    8317 B/op    237 allocs/op
+ sqlc_prep:     0.15s       750069 ns/op    1840 B/op     56 allocs/op
+      sqlc:     0.15s       758024 ns/op    1810 B/op     55 allocs/op
+  raw_stmt:     0.15s       766896 ns/op    1760 B/op     55 allocs/op
+       raw:     0.15s       774634 ns/op    1733 B/op     54 allocs/op
+ gorm_prep:     0.16s       775056 ns/op    4508 B/op     89 allocs/op
+        pg:     0.16s       802909 ns/op     873 B/op     20 allocs/op
+      gorm:     0.17s       854403 ns/op    4869 B/op    102 allocs/op
+ beego_orm:     0.31s      1537275 ns/op    2656 B/op     87 allocs/op
+      xorm:     0.32s      1622372 ns/op    9296 B/op    243 allocs/op
 
    200 times - MultiRead limit 100
-  raw_stmt:     0.18s       898962 ns/op   38390 B/op   1038 allocs/op
-       raw:     0.18s       900517 ns/op   38358 B/op   1037 allocs/op
- sqlc_prep:     0.19s       942075 ns/op   73163 B/op   1251 allocs/op
-      sqlc:     0.19s       945159 ns/op   73175 B/op   1250 allocs/op
-        pg:     0.20s       979833 ns/op   27652 B/op    631 allocs/op
- beego_orm:     0.21s      1067867 ns/op   55242 B/op   3077 allocs/op
-       bun:     0.22s      1103090 ns/op   28836 B/op   1116 allocs/op
- gorm_prep:     0.25s      1245145 ns/op   71323 B/op   3577 allocs/op
-      gorm:     0.26s      1291367 ns/op   71716 B/op   3877 allocs/op
+  raw_stmt:     0.18s       918233 ns/op   25523 B/op   1041 allocs/op
+       raw:     0.19s       951866 ns/op   25479 B/op   1040 allocs/op
+ sqlc_prep:     0.19s       967271 ns/op   60373 B/op   1255 allocs/op
+      sqlc:     0.19s       972969 ns/op   60347 B/op   1254 allocs/op
+        pg:     0.20s       994286 ns/op   22299 B/op    629 allocs/op
+ gorm_prep:     0.23s      1150203 ns/op   43387 B/op   2082 allocs/op
+      gorm:     0.24s      1202604 ns/op   45256 B/op   2384 allocs/op
+ beego_orm:     0.38s      1907212 ns/op   55862 B/op   3089 allocs/op
       xorm:     doesn't work
 ```
 

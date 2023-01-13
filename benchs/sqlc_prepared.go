@@ -3,8 +3,8 @@ package benchs
 import (
 	"database/sql"
 	"fmt"
-
-	"github.com/frederikhors/orm-benchmark/benchs/sqlc_prepared/db"
+	_ "github.com/jackc/pgx/v5"
+	"orm-benchmark-new/benchs/sqlc_prepared/db"
 )
 
 var (

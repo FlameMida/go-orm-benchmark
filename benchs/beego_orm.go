@@ -5,7 +5,7 @@ import (
 
 	"database/sql"
 
-	"github.com/astaxie/beego/orm"
+	"github.com/beego/beego/v2/client/orm"
 )
 
 var bo orm.Ormer
@@ -76,7 +76,7 @@ func init() {
 		st.AddBenchmark("Read", 200*OrmMulti, BeegoOrmRead)
 		st.AddBenchmark("MultiRead limit 100", 200*OrmMulti, BeegoOrmReadSlice)
 
-		err := orm.RegisterDataBase("default", "postgres", OrmSource, OrmMaxIdle, OrmMaxConn)
+		err := orm.RegisterDataBase("default", "postgres", OrmSource, orm.MaxOpenConnections(OrmMaxConn), orm.MaxIdleConnections(OrmMaxIdle))
 		checkErr(err)
 		orm.RegisterModel(new(BeegoModel))
 

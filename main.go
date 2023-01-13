@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/frederikhors/orm-benchmark/benchs"
+	"orm-benchmark-new/benchs"
 
 	_ "github.com/lib/pq"
 )

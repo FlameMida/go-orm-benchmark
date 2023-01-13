@@ -1,13 +1,16 @@
 package benchs
 
 import (
+	"context"
 	"database/sql"
 	"fmt"
 
-	"github.com/frederikhors/orm-benchmark/benchs/sqlc/db"
+	_ "github.com/jackc/pgx/v5"
+	"orm-benchmark-new/benchs/sqlc/db"
 )
 
 var (
+	ctx         = context.Background()
 	sqlcQueries *db.Queries
 )
 
