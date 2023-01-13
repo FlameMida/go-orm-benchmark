@@ -14,13 +14,13 @@ _(forked from https://github.com/yusaer/orm-benchmark)_
 
 All package run in no-cache mode.
 
-- [beego/orm](https://github.com/astaxie/beego/tree/master/orm)
+- [beego 2/orm](https://github.com/beego/beego/v2/client/orm)
 - [gorm 2](https://github.com/go-gorm/gorm)
 - [pg](https://github.com/go-pg/pg)
 - [sqlc](https://github.com/kyleconroy/sqlc) (partially)
 - [xorm](https://github.com/xormplus/xorm)
 
-See [`go.mod`](https://github.com/frederikhors/orm-benchmark/blob/master/go.mod) for their latest versions.
+See [`go.mod`](https://github.com/FlameMida/go-orm-benchmark/blob/master/go.mod) for their latest versions.
 
 ### Run
 
